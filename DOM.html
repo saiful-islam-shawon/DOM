@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p>want to access a class from a div.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello, World!&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;div class="message"&gt;shawon&lt;/div&gt;
+      &lt;div id="container"&gt;
+        &lt;h1 class="message"&gt;this is message&lt;/h1&gt;
+        &lt;h1 class="message"&gt;this is message&lt;/h1&gt;
+      &lt;/div&gt;
+      
+      &lt;p id="currentTime"&gt;&lt;/p&gt;
+      &lt;script&gt;
+        const cont = document.getElementById("container");
+        const msg = cont.getElementByClassName("message");
+      &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>How to get parrent Element</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello, World!&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;div class="message"&gt;shawon&lt;/div&gt;
+      &lt;div id="container"&gt;
+        &lt;h1 class="message"&gt;this is message&lt;/h1&gt;
+        &lt;h1 class="message"&gt;this is message&lt;/h1&gt;
+      &lt;/div&gt;
+      
+      &lt;p id="currentTime"&gt;&lt;/p&gt;
+      &lt;script&gt;
+        const msg = document.getElementByClassName("message");
+        colsole.log(msg.parentNode)
+      &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>same way want to access child node.</p>
+<pre><code>const parent = document.getElementById("container")
+console.log(parent.childNode)
+</code></pre>
+<p>we can access previous sibling and next sibling.</p>
+<p>create a element and appendchild inside anything</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello, World!&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      
+      &lt;p id="currentTime"&gt;&lt;/p&gt;
+      &lt;script&gt;
+        const div = document.createElement("div")
+        div.innerHtml = "&lt;p&gt;welcome shawon&lt;/p&gt;"
+        document.body.appendChild(div)
+      &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>add id in div</p>
+<pre><code>div.id = "shawon"
+</code></pre>
+<p>add class in div</p>
+<pre><code>div.className = "shawon"
+</code></pre>
+<p>to get inner value of div</p>
+<pre><code>console.log(div.textContent)
+console.log(div.innerText)
+</code></pre>
+<p>innerText -----&gt; just only show vissible text</p>
+<p>if we use textContent everything in the content will be remove</p>
+<pre><code>div.textContent = "Hello"
+</code></pre>
+<p>some importent function</p>
+<pre><code>parentNode.append(newNodes)
+parentNode.prependNode(newNodes)
+node.after(newNodes)
+</code></pre>
+<p>If i want to replace any child node with new node</p>
+<pre><code>parentNode.replaceChild(newChild, oldChild);
+</code></pre>
+<p>we can clone any node</p>
+<pre><code>let newNode = originalNode.CloneNode()
+</code></pre>
+<p>If i want to remove any child node from parentNode</p>
+<pre><code>parentNode.removeChild(childNode)
+</code></pre>
+<p>If i want to add new node before a child node</p>
+<pre><code>parentNode.insertBefore(newNode, existingNode)
+</code></pre>
+<p>if want to get all attribute from a element</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello, World!&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      
+      &lt;input type="text" id="username" placeholder="username"&gt;
+      
+      &lt;script&gt;
+        
+        const inputbox = document.getElementById("username")
+        console.log(inputbox.attributes)
+        
+      &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>want to see any attribute value</p>
+<pre><code>console.log(inputbox.getAttribute("attribute_name"))
+</code></pre>
+<p>if want to set attribute</p>
+<pre><code>inputbox.setAttribute("attribute_name", "attribute_value")
+</code></pre>
+<p>check a attribute has or not</p>
+<pre><code>console.log(inputbox.hasAttribute("attribute_name")
+</code></pre>
+<p>want to remove any attribute</p>
+<pre><code>inputbox.removeAttribute("attribute_name")
+</code></pre>
+<p>if i want to see style</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello, World!&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      
+      &lt;input type="text" id="username" placeholder="username" style="background-color: red; font-size: 20px"&gt;
+      
+      &lt;script&gt;
+        
+        const inputbox = document.getElementById("username")
+        console.log(inputbox.style)
+        
+      &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>want to see any style</p>
+<pre><code>console.log(inputbox.style.backgroundColor);
+</code></pre>
+<p>if i want to add new property in style</p>
+<pre><code>inputbox.style.padding = "10px"
+</code></pre>
+<p>want to add css. check both of these</p>
+<pre><code>inputbox.style.cssText += "height: 100px; width: 100px";
+inputbox.style.cssText = "height: 100px; width: 100px";
+</code></pre>
+<p>I want to see all class name</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello, World!&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      
+      &lt;h1 id="title" class="main message"&gt;Hello&lt;/h1&gt;
+      
+      &lt;script&gt;
+        
+        const title = document.getElementById("title");
+        console.log(title.className)
+        
+      &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>want to add new class. check both of these</p>
+<pre><code>title.className = "shawon"
+title.className += "shawon"
+
+</code></pre>
+<p>if i want to see all class name in a array</p>
+<pre><code>console.log(title.classList);
+</code></pre>
+<p>want to add new class</p>
+<pre><code>title.classList.add("shuvo")
+</code></pre>
+<p>want to remove a class</p>
+<pre><code>title.classList.remove("class_name")
+</code></pre>
+<p>want to replace a class with another class</p>
+<pre><code>title.classList.replace("message", "shawon")
+</code></pre>
+<p>want to see any class have or not</p>
+<pre><code>console.log(title.classList.contains("message")
+</code></pre>
+<p>total event<br>
+1: click event<br>
+2: mouse move event<br>
+3: mouse down event<br>
+4: mouse up event<br>
+5: mouse over event<br>
+6: mouse out event<br>
+7: keydown event<br>
+8: key up event<br>
+9: key press event<br>
+10: scroll event</p>
+<p>usage of click event</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello, World!&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      
+      
+      &lt;div id="container"&gt;
+        &lt;button type="button" onclick="displaymsg()"&gt;click here&lt;/button&gt;
+      &lt;/div&gt;
+      
+      &lt;script&gt;
+        
+        function displaymsg(){
+          console.log("hello shawon");
+        }
+        
+      &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>If we use event target that is capture that element</p>
+<pre><code>&lt;div id="container"&gt;
+   &lt;button type="button" onclick="console.log(event.target)"&gt;click here&lt;/button&gt;
+ &lt;/div&gt;
+</code></pre>
+<p>this keyword refers to the target element</p>
+<pre><code>&lt;div id="container"&gt;
+   &lt;button type="button" onclick="console.log(this)"&gt;click here&lt;/button&gt;
+ &lt;/div&gt;
+</code></pre>
+<p>we can add click event another way</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+   &lt;title&gt;Hello, World!&lt;/title&gt;
+   &lt;link rel="stylesheet" href="styles.css" /&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+     
+     
+     &lt;div id="container"&gt;
+       &lt;button type="button" id="btn"&gt;click here&lt;/button&gt;
+     &lt;/div&gt;
+     
+     &lt;script&gt;
+       
+       const btn =  document.getElementById("btn");
+       btn.onclick= function(){
+         console.log("button is clicked");
+         console.log(this.id);
+       }
+       
+     &lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>we can use addEvenetListener to add click</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello, World!&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      
+      
+      &lt;div id="container"&gt;
+        &lt;button type="button" id="btn"&gt;click here&lt;/button&gt;
+      &lt;/div&gt;
+      
+      &lt;script&gt;
+        
+        const btn =  document.getElementById("btn");
+        btn.addEventListener("click", function(){
+          console.log("but is click");
+          console.log(event.type);
+        })
+        
+      &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>we can use this way</p>
+<pre><code>&lt;script&gt;
+        
+	   function displaymsg(){
+	     console.log("click the button");
+	   }
+	   
+	   const btn =  document.getElementById("btn");
+	   btn.addEventListener("click", displaymsg)
+   
+ &lt;/script&gt;
+</code></pre>
+<p>if i want to remove onclick event</p>
+<pre><code>btn.removeAddEventListener("")
+</code></pre>
+<h1 id="some-important-event">some important event</h1>
+<h2 id="🔥-1.-click-event">🔥 1. Click Event</h2>
+<p>👉 সবচেয়ে বেশি ব্যবহার হয়</p>
+<p>btn.addEventListener(“click”, function () {<br>
+console.log(“Button clicked”);<br>
+});</p>
+<p>📌 যখন user button বা element-এ click করে তখন trigger হয়।</p>
+<hr>
+<h2 id="⌨️-2.-key-events">⌨️ 2. Key Events</h2>
+<p>👉 keyboard input handle করার জন্য</p>
+<h3 id="keydown">keydown</h3>
+<p>document.addEventListener(“keydown”, function (e) {<br>
+console.log(e.key);<br>
+});</p>
+<p>📌 key press করলেই run হয়।</p>
+<hr>
+<h2 id="🖱️-3.-mouse-events">🖱️ 3. Mouse Events</h2>
+<h3 id="mouseover">mouseover</h3>
+<p>btn.addEventListener(“mouseover”, function () {<br>
+console.log(“Mouse over button”);<br>
+});</p>
+<h3 id="mouseout">mouseout</h3>
+<p>btn.addEventListener(“mouseout”, function () {<br>
+console.log(“Mouse left button”);<br>
+});</p>
+<p>📌 hover effect বানাতে কাজে লাগে।</p>
+<hr>
+<h2 id="📥-4.-input-event">📥 4. Input Event</h2>
+<p>👉 form input track করার জন্য</p>
+<p>const  input  =  document.querySelector(“input”);</p>
+<p>input.addEventListener(“input”, function (e) {<br>
+console.log(e.target.value);<br>
+});</p>
+<p>📌 user টাইপ করলেই value change detect করে।</p>
+<hr>
+<h2 id="📄-5.-submit-event">📄 5. Submit Event</h2>
+<p>const  form  =  document.querySelector(“form”);</p>
+<p>form.addEventListener(“submit”, function (e) {<br>
+e.preventDefault();<br>
+console.log(“Form submitted”);<br>
+});</p>
+<p>📌 form submit হলে trigger হয়।</p>
+<hr>
+<h2 id="🌐-6.-domcontentloaded">🌐 6. DOMContentLoaded</h2>
+<p>document.addEventListener(“DOMContentLoaded”, function () {<br>
+console.log(“Page fully loaded”);<br>
+});</p>
+<p>📌 পুরো HTML load হওয়ার পরে run হয় (best practice 🔥)</p>
+<hr>
+<h2 id="📦-bonus-change-event">📦 Bonus: Change Event</h2>
+<p>const  select  =  document.querySelector(“select”);</p>
+<p>select.addEventListener(“change”, function () {<br>
+console.log(“Value changed”);<br>
+});</p>
+<hr>
+<h2 id="⚡-pro-tip">⚡ Pro Tip</h2>
+<p>👉 <code>onclick</code> না ব্যবহার করে <strong>addEventListener()</strong> use করো<br>
+কারণ এটা বেশি flexible এবং professional way।</p>
+</div>
+</body>
+
+</html>
