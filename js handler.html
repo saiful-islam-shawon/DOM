@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="সব-event-handlers-এর-তালিকা">সব Event Handlers এর তালিকা</h1>
+<h3 id="🖱️-mouse-events">🖱️ Mouse Events</h3>
+<p>js</p>
+<pre class=" language-js"><code class="prism  language-js">onclick        <span class="token comment">// click করলে</span>
+ondblclick     <span class="token comment">// double click করলে</span>
+onmousedown    <span class="token comment">// mouse button চাপলে</span>
+onmouseup      <span class="token comment">// mouse button ছাড়লে</span>
+onmouseover    <span class="token comment">// mouse element এর উপর আসলে</span>
+onmouseout     <span class="token comment">// mouse element থেকে সরে গেলে</span>
+onmousemove    <span class="token comment">// mouse নড়লে</span>
+</code></pre>
+<hr>
+<h3 id="⌨️-keyboard-events">⌨️ Keyboard Events</h3>
+<p>js</p>
+<pre class=" language-js"><code class="prism  language-js">onkeydown      <span class="token comment">// key চাপলে</span>
+onkeyup        <span class="token comment">// key ছাড়লে</span>
+onkeypress     <span class="token comment">// key চেপে ধরলে (deprecated)</span>
+</code></pre>
+<hr>
+<h3 id="📝-form-events">📝 Form Events</h3>
+<p>js</p>
+<pre class=" language-js"><code class="prism  language-js">oninput        <span class="token comment">// typing এর সাথে সাথে</span>
+onchange       <span class="token comment">// focus সরে গেলে</span>
+onsubmit       <span class="token comment">// form submit করলে</span>
+onfocus        <span class="token comment">// input এ click করলে</span>
+onblur         <span class="token comment">// input থেকে বের হলে</span>
+onreset        <span class="token comment">// form reset করলে</span>
+onselect       <span class="token comment">// text select করলে</span>
+</code></pre>
+<hr>
+<h3 id="🌐-windowdocument-events">🌐 Window/Document Events</h3>
+<p>js</p>
+<pre class=" language-js"><code class="prism  language-js">onload         <span class="token comment">// page load হলে</span>
+onunload       <span class="token comment">// page বন্ধ হলে</span>
+onresize       <span class="token comment">// window resize করলে</span>
+onscroll       <span class="token comment">// scroll করলে</span>
+onbeforeunload <span class="token comment">// page ছাড়ার আগে</span>
+</code></pre>
+<hr>
+<h3 id="📱-touch-events-mobile">📱 Touch Events (Mobile)</h3>
+<p>js</p>
+<pre class=" language-js"><code class="prism  language-js">ontouchstart   <span class="token comment">// touch শুরু হলে</span>
+ontouchend     <span class="token comment">// touch শেষ হলে</span>
+ontouchmove    <span class="token comment">// touch করে নাড়লে</span>
+</code></pre>
+<hr>
+<h3 id="🎬-media-events">🎬 Media Events</h3>
+<p>js</p>
+<pre class=" language-js"><code class="prism  language-js">onplay         <span class="token comment">// video/audio play হলে</span>
+onpause        <span class="token comment">// pause করলে</span>
+onended        <span class="token comment">// শেষ হলে</span>
+onvolumechange <span class="token comment">// volume বদলালে</span>
+</code></pre>
+<hr>
+<h3 id="🖱️-drag-events">🖱️ Drag Events</h3>
+<p>js</p>
+<pre class=" language-js"><code class="prism  language-js">ondrag         <span class="token comment">// drag করার সময়</span>
+ondragstart    <span class="token comment">// drag শুরু হলে</span>
+ondragend      <span class="token comment">// drag শেষ হলে</span>
+ondrop         <span class="token comment">// drop করলে</span>
+</code></pre>
+<hr>
+<h3 id="সহজ-example-সব-দিয়ে">সহজ Example সব দিয়ে:</h3>
+<p>html</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> 
+  <span class="token attr-name">onfocus</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>console.log(<span class="token punctuation">'</span>focused<span class="token punctuation">'</span>)<span class="token punctuation">"</span></span>
+  <span class="token attr-name">onblur</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>console.log(<span class="token punctuation">'</span>left<span class="token punctuation">'</span>)<span class="token punctuation">"</span></span>
+  <span class="token attr-name">oninput</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>console.log(<span class="token punctuation">'</span>typing<span class="token punctuation">'</span>)<span class="token punctuation">"</span></span>
+  <span class="token attr-name">onchange</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>console.log(<span class="token punctuation">'</span>changed<span class="token punctuation">'</span>)<span class="token punctuation">"</span></span>
+<span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> 
+  <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>console.log(<span class="token punctuation">'</span>clicked<span class="token punctuation">'</span>)<span class="token punctuation">"</span></span>
+  <span class="token attr-name">onmouseover</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>console.log(<span class="token punctuation">'</span>hovering<span class="token punctuation">'</span>)<span class="token punctuation">"</span></span>
+<span class="token punctuation">&gt;</span></span>
+  Click Me
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+  window<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"page loaded"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  window<span class="token punctuation">.</span><span class="token function-variable function">onscroll</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"scrolling"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  window<span class="token punctuation">.</span><span class="token function-variable function">onresize</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"resized"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<hr>
+<h3 id="মনে-রাখার-উপায়">মনে রাখার উপায়:</h3>
+<pre><code>on + [কী হচ্ছে] = event handler
+
+on + click     = onclick
+on + input     = oninput
+on + scroll    = onscroll
+on + load      = onload
+</code></pre>
+</div>
+</body>
+
+</html>
